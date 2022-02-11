@@ -69,12 +69,12 @@
 #define CONFIG_DISPLAY_BOARDINFO	1
 
 #define CONFIG_SYS_BOARD_NAME		"M2S-FG484-SOM"
-#define CONFIG_SYS_BOARD_REV_STR	"1A, UWUWUW"
+#define CONFIG_SYS_BOARD_REV_STR	"1A, University of Warsaw"
 
 /*
  * Monitor prompt
  */
-#define CONFIG_SYS_PROMPT		"M2S-FG484-SOM22> "
+#define CONFIG_SYS_PROMPT		"mpd-gg u-boot> "
 
 /*
  * We want to call the CPU specific initialization
@@ -301,6 +301,9 @@
 #define CONFIG_BOOTARGS			"m2s_platform=m2s-fg484-som "\
 					"console=ttyS0,115200 panic=10"
 #define CONFIG_BOOTCOMMAND		"run flashboot"
+
+#define CONFIG_CMD_DHCP
+
 
 /*
  * Macro for the "loadaddr". The most optimal load address

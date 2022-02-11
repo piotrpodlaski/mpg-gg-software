@@ -55,6 +55,7 @@ file /bin/busybox ${INSTALL_ROOT}/A2F/busybox/busybox 755 0 0
 
 slink /bin/init busybox 777 0 0
 slink /init /bin/init 777 0 0
+slink /bin/inetd busybox 777 0 0
 ifarch A2F file /etc/inittab ${INSTALL_ROOT}/projects/${SAMPLE}/local/inittab.ALL 755 0 0
 ifarch LPC file /etc/inittab ${INSTALL_ROOT}/projects/${SAMPLE}/local/inittab.ALL 755 0 0
 ifarch LPC18XX file /etc/inittab ${INSTALL_ROOT}/projects/${SAMPLE}/local/inittab.ALL 755 0 0
@@ -67,6 +68,7 @@ ifarch STM32F7DISCO file /etc/inittab ${INSTALL_ROOT}/projects/${SAMPLE}/local/i
 ifarch K70 file /etc/inittab ${INSTALL_ROOT}/projects/${SAMPLE}/local/inittab.K70 755 0 0
 ifarch M2S file /etc/inittab ${INSTALL_ROOT}/projects/${SAMPLE}/local/inittab.M2S 755 0 0
 file /etc/rc ${INSTALL_ROOT}/projects/${SAMPLE}/local/rc 755 0 0
+file /etc/profile ${INSTALL_ROOT}/projects/${SAMPLE}/local/profile 755 0 0
 file /etc/hosts ${INSTALL_ROOT}/projects/${SAMPLE}/local/hosts 644 0 0
 file /etc/services ${INSTALL_ROOT}/projects/${SAMPLE}/local/services 644 0 0
 file /etc/protocols ${INSTALL_ROOT}/projects/${SAMPLE}/local/protocols 644 0 0
@@ -80,6 +82,7 @@ dir /etc/dropbear 0755 0 0
 file /etc/dropbear/dropbear_dss_host_key ${INSTALL_ROOT}/projects/${SAMPLE}/local/ssh_host_dss_key 644 0 0
 # file /etc/dropbear/dropbear_rsa_host_key ${INSTALL_ROOT}/projects/${SAMPLE}/local/ssh_host_rsa_key 644 0 0
 file /usr/sbin/dropbear ${INSTALL_ROOT}/A2F/root/usr/sbin/dropbear 755 0 0
+file /etc/inetd.conf ${INSTALL_ROOT}/projects/${SAMPLE}/local/inetd.conf 644 0 0
 
 # net-snmp project
 ifarch STM32F7 file /usr/bin/snmpget ${INSTALL_ROOT}/A2F/root/usr/bin/snmpget 755 0 0
